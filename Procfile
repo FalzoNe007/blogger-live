@@ -1,1 +1,1 @@
-web: gunicorn blogger.wsgy --log-file -
+web: gunicorn blogger.wsgy
