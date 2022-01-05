@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %} {% block title %}Home{% endblock title %} 
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <h1>{{ post.author|capfirst }}</h1>
+    {% if post.header %}
+    <div class="col-md-2">
+      <img src="{{ post.header.url }}" width="100px" height="100px" alt="">
+    </div>
+    
+    {% endif %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    
+  </div>
+  
+    <a href="{% url 'blog:post-list' %}" class="btn btn-primary mb-3" class>Back</a>
+    {% if user.id == post.author.id %}
+    <a href="{% url 'blog:post-delete' pk=post.id %}" class="btn btn-primary mb-3" class>Delete</a>
+    <a href="{% url 'blog:post-update' pk=post.id %}" class="btn btn-primary mb-3" class>Update</a>
+
+    {% endif %}
+    <br>
+  
+</div>
+
+{% endblock content %}

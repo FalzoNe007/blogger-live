@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Delete {{ post }}{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+<div class="container-fluid">
+
+<form method="post">{% csrf_token %}
+    <br>
+    <p>Are you sure you want to delete "{{ post }}"?</p>
+    {{ form|crispy }}
+    <input class="btn btn-primary mb-3" type="submit" value="Confirm">
+</form>
+
+</div>
+{% else %} You're not allowed in here!
+{% endif %}
+
+{% else %}You're not allowed in here!!!
+{% endif %}
+
+
+{% endblock content %}

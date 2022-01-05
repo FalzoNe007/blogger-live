@@ -1,0 +1,22 @@
+html,
+body {
+    background-color: rgb(243, 237, 237);
+    
+}
+
+
+/* Modify the background color */
+.navbar-custom {
+    background-color: #382a03;
+}
+
+
+.navbar-nav>li> {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*
+.navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+} */
