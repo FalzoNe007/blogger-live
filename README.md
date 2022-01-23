@@ -1,7 +1,9 @@
 # blogger-live
 
-# CREDENTIALS to try out as logged in user:
+## This is a blog project with functionalities such as: Login and registration system, CRUD operations with Posts, Authorization and Authentification, Profile editing, Pagination and basic password change.
 
-## username: loreno
+## CREDENTIALS to try out as logged in user:
 
-## password: 987654321loreno
+**username: loreno**
+
+**password: 987654321loreno**
